@@ -34,14 +34,14 @@ function joinQueue(){
     passeagerCount.innerHTML = taxiQueue.queueLength()
     localStorage.setItem('passeager_count', taxiQueue.queueLength())
 }
-joinBtn.addEventListener('click', joinQueue)
+joinBtn.addEventListener('click', joinQueue);
 
 function leaveQueue(){
     taxiQueue.leaveQueue();
     passeagerCount.innerHTML = taxiQueue.queueLength()
     localStorage.setItem('passeager_count', taxiQueue.queueLength())
 }
-leaveBtn.addEventListener('click', leaveQueue)
+leaveBtn.addEventListener('click', leaveQueue);
 
 
 function taxiJoinQueue(){
@@ -49,11 +49,11 @@ function taxiJoinQueue(){
     taxiCount.innerHTML = taxiQueue.taxiQueueLength();
     localStorage.setItem('taxi_count', taxiQueue.taxiQueueLength());
 }
-jointaxiBtn.addEventListener('click',taxiJoinQueue)
+jointaxiBtn.addEventListener('click',taxiJoinQueue);
 
 function taxiDepart(){
-    taxiQueue.departBtn;
+    taxiQueue.taxiDepart();
     taxiCount.innerHTML = taxiQueue.taxiQueueLength();
     localStorage.setItem('taxi_count', taxiQueue.taxiQueueLength());
 }
-departBtn.addEventListener('click',taxiDepart)
+departBtn.addEventListener('click',taxiDepart);
