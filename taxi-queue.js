@@ -27,7 +27,7 @@ function TaxiQueue(_counter, _taxiCounter) {
 	}
 
 	function taxiDepart(){
-		if(counter > 12 && taxiCounter > 0)
+		if(counter >= 12 && taxiCounter > 0)
 		{
 			taxiCounter--;
 			counter = counter - 12;

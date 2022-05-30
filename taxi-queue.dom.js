@@ -41,7 +41,7 @@ function joinQueue() {
     setTimeout(function () {
         JoinQueueMessageElem.innerHTML = "";
     }, 4000);
-    JoinQueueMessageElem.innerHTML =   taxiQueue.queueLength() + " passenger's in queue"
+    JoinQueueMessageElem.innerHTML =  "1 passenger joined a queue.  "+ taxiQueue.queueLength() + " passenger's in queue"
 }
 joinBtn.addEventListener('click', joinQueue);
 
@@ -52,7 +52,7 @@ function leaveQueue() {
     setTimeout(function () {
         JoinQueueMessageElem.innerHTML = "";
     }, 4000);
-    JoinQueueMessageElem.innerHTML =   taxiQueue.queueLength() + " passenger's availabe"
+    JoinQueueMessageElem.innerHTML =  "1 passenger left a queue.  " +  taxiQueue.queueLength() + " passenger's availabe"
 }
 leaveBtn.addEventListener('click', leaveQueue);
 
@@ -64,12 +64,12 @@ function taxiJoinQueue() {
     setTimeout(function () {
         JoinMessageElem.innerHTML = "";
     }, 4000);
-    JoinMessageElem.innerHTML =   taxiQueue.taxiQueueLength() + " taxi's availabe"
+    JoinMessageElem.innerHTML =   "1 taxi joined a queue. " + taxiQueue.taxiQueueLength() + " taxi's availabe"
 }
 jointaxiBtn.addEventListener('click', taxiJoinQueue);
 
 function taxiDepart() {
-    if (taxiQueue.queueLength() > 12) {
+    if (taxiQueue.queueLength() >= 12) {
 
         if (taxiQueue.taxiQueueLength() > 0) {
             taxiQueue.taxiDepart();
