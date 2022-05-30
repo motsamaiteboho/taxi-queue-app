@@ -1,7 +1,7 @@
-function TaxiQueue() {
+function TaxiQueue(_counter, _taxiCounter) {
 
-	var counter = 0;
-	var taxiCounter = 0;
+	var counter = _counter ? _counter : 0;
+	var taxiCounter = _taxiCounter ? _taxiCounter : 0;
 
 	function joinQueue() {
 		counter++;

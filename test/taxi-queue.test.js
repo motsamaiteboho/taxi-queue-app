@@ -1,5 +1,12 @@
 describe('The taxi queue app', function() {
 
+	it ('should be able to initialize the counter to a specified value', function() {
+
+		const taxiQueue = TaxiQueue(5,5);
+		assert.equal(5, taxiQueue.queueLength());
+		assert.equal(5, taxiQueue.taxiQueueLength());
+
+	});
 	it ('should allow people to join the queue', function() {
 
 		const taxiQueue = TaxiQueue();

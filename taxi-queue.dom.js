@@ -29,4 +29,10 @@ passeagerCount.innerHTML = taxiQueue.queueLength();
 taxiCount.innerHTML = taxiQueue.taxiQueueLength();
 
 // DOM events
+function joinQueue(){
+    taxiQueue.joinQueue();
+    passeagerCount.innerHTML = taxiQueue.queueLength()
+    localStorage.setItem('passeager_count', taxiQueue.queueLength())
+}
+joinBtn.addEventListener('click', joinQueue)
 
