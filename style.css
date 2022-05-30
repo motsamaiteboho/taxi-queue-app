@@ -26,6 +26,19 @@ button {
 	font-weight: bold;
 }
 
+.success, .taxisuccess,.passsuccess {
+	color: green;
+	font-weight: 200;
+	font-style: italic;
+	font-size: 2em;
+}
+.error, .notaxierror {
+	color: red;
+	font-weight: 200;
+	font-style: italic;
+	font-size: 1.5em;
+}
+
 @media (min-width: 768px) {
 	.sections {
 		display: flex;
